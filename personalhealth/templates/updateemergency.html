@@ -1,0 +1,11 @@
+<form action="/updateemergency/" method="post">
+{% csrf_token %}
+{% for emergen in emer %}
+<input type="hidden" name="id" id="id"  value="{{emergen.id}}"required/>
+HOSPITALNAME: <input type="text" name="hname"   value="{{emergen.hospitalname}}"><br>
+location:<input type="text" name="location" value="{{emergen.location}}"><br>
+phone:<input type="text" name="phone"   value="{{emergen.phone}}">
+{% endfor%}
+<button type="submit"> Submit</button>
+</form>
+

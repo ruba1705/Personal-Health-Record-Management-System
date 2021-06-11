@@ -1,0 +1,17 @@
+<form action="/updateprescription/" method="post">
+<div class="form-group">
+{% csrf_token %}
+{% for presc in pres %}
+<input type="hidden" name="id" id="id"  value="{{presc.id}}"required/>
+prescription Name: <input type="text" name="prescriptionname" value="{{presc.prescrip_name}}"><br>
+Description : <input type="text" rows="20" cols="100" name="description" value="{{presc.description}}"></textarea><br>
+time<input type="time" name="time" value="{{presc.time}}"><br>
+Medicinename:<input type="file" name="medicinename" value="{{presc.medicinename}}"><br>
+meal:<select name="meal" value="{{presc.meal}}"> 
+<option name="Before" value="Before"> Before</option>
+<option name="After" value="After"> After</option> </select>
+Disease Name: <input type="text" name="diseasename" value="{{presc.diseasename}}"><br>
+{% endfor %}
+<center>
+<button type="submit" class="btn btn-primary"><B>Update Prescription</B></button></center>
+</form>

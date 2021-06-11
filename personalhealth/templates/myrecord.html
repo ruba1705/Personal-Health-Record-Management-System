@@ -1,0 +1,14 @@
+<form action="/addrecord/" method="post">
+{% csrf_token %}
+Hospitalname: <input type="text" name="hname"><br>
+Doctorname: <input type="text" name="dname"><br>
+Date<input type="date" name="date"><br>
+Prescription:<input type="file" name="presc" ><br>
+File:<input type="file" name="fil" ><br>
+Diseasename: <input type="text" name="diname"><br>
+Hospitallocation:<textarea rows="20" cols="100" name="hlocation"></textarea>
+documentname:<input type="text" name="dtname"><br>
+Description:<textarea  rows="20" cols="100" name="desc"></textarea>
+
+<button type="submit"> Submit</button>
+</form>

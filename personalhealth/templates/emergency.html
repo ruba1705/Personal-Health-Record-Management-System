@@ -1,0 +1,7 @@
+<form action="/addemergency/" method="post">
+{% csrf_token %}
+HOSPITALNAME: <input type="text" name="hname"><br>
+location:<textarea rows="10" column="40" name="location"></textarea>
+phone:<input type="text" name="phone">
+<button type="submit"> Submit</button>
+</form>

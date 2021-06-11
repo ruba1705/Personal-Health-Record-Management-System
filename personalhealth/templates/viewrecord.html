@@ -1,0 +1,20 @@
+<center>
+<center>MY RECORDS</center>
+<table border="2">
+
+<tr><th>Hospitalname</th><th>Doctorname</th><th>HospitalLocation</th><th>DiseaseName</th><th>Date</th><th>DocumentName</th><th>Description</th><th>Prescription</th><th>File</th></tr>
+{% for i in myrecord %}
+<tr><td><p>{{i.hospitalname}}</p></td>
+<td><p>{{i.doctorname}}</p></td>
+<td><p>{{i.hospitallocation}}</p></td>
+<td><p>{{i.diseasename}}</p></td> 
+<td><p>{{i.date}}</p></td> 
+<td><p>{{i.documentname}}</p></td> 
+<td><p>{{i.description}}</p></td> 
+<td><p>{{i.prescription}}</p></td>
+<tr><td><p>{{i.file}}</p></td><td><a href="/recordelete/{{i.id}}" >Delete</a></td><td><a href="/recordupdate/{{i.id}}" >update</a></td>  </tr>
+{% endfor %}
+</table>
+
+
+      

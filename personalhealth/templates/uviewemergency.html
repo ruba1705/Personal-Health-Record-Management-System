@@ -1,0 +1,8 @@
+<center>
+<center> EMERGENCY DETAILS</center>
+<table border="2">
+<tr><th> Hospitalname</th><th> Location</th><th>Contanct Number</th></tr>
+{% for i in emergency %}
+<tr><td><p>{{i.hospitalname}}</p></td><td><p>{{i.location}}</p><td><p>{{i.phone}}</p></td>  </tr>
+{% endfor %}
+</table>

@@ -1,0 +1,17 @@
+<form action="/updaterecord/" method="post">
+{% csrf_token %}
+{% for recor in rec %}
+<input type="hidden" name="id" id="id"  value="{{recor.id}}"required/>
+Hospitalname: <input type="text" name="hname" value="{{recor.hospitalname}}"><br>
+Doctorname: <input type="text" name="dname"  value="{{recor.doctorname}}"><br>
+Date<input type="date" name="date" value="{{recor.date}}"><br>
+Prescription:<input type="file" name="presc" value="{{recor.prescription}}" ><br>
+File:<input type="file" name="fil"  value="{{recor.file}}"><br>
+Diseasename: <input type="text" name="diname" value="{{recor.diseasename}}"><br>
+Hospitallocation:<input type="text" name="hlocation" value="{{recor.hospitallocation}}"><br>
+documentname:<input type="text" name="dtname" value="{{recor.documentname}}"><br>
+Description:<input type="text" name="desc" value="{{recor.description}}"><br>
+{% endfor%}
+<button type="submit"> Submit</button>
+</form>
+

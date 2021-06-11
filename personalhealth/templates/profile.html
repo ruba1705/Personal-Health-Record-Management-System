@@ -1,0 +1,159 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>USER PROFILE</title>
+  </head>
+  <body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<div class="container">
+ <form class="well form-horizontal" action="/addprofile/ " method="post"  id="contact_form">
+<fieldset>
+<legend><center><h2><b>USER PROFILE</b></h2></center></legend><br>
+{% csrf_token %}
+
+<div class="form-group">
+  <label class="col-md-4 control-label">First Name*:</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="fname" placeholder="First Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Last Name</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="lname" placeholder="Last Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!---<div class="form-group">
+  <label class="col-md-4 control-label" >Email</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="email" placeholder="email" class="form-control"  type="email">
+    </div>
+  </div>
+</div>-->
+
+<div class="form-group">
+ <label class="col-md-4 control-label" >DOB</label> 
+     <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+ <input type="date" placeholder="enter your Date of Birth"  class="form-control" name="dob"><br>
+</div>
+  </div>
+</div>
+       
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Health issue</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="healthissue" class="form-control selectpicker">
+      <option value="">Select the health issue</option>  
+       <option>Heart</option>
+       <option>Lungs</option>
+       <option>Eye</option>
+       <option>Kidney</option>
+</select>
+  </div>
+</div>
+</div>
+       
+
+
+
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Enter the Interest</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="interest" class="form-control selectpicker">
+      <option value="">Choose the interest</option>  
+      <option>Politics</option>
+      <option>ComputerScience</option>
+      <option>History</option>
+</select>
+  </div>
+</div>
+</div>
+
+        
+
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Hobby</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="hobby" class="form-control selectpicker">
+      <option value="">Select the hobby</option>  
+      <option>Sports</option>
+      <option>Music</option>
+      <option>Cooking</option>
+      <option>Movies</option>
+       <option>Drawing</option>
+</select>
+  </div>
+</div>
+</div>
+
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Economic Preference</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="economic_pref" class="form-control selectpicker">
+      <option value="">Select the economic preference</option>  
+<option>High</option>
+      <option>Moderate</option>
+      <option>Low</option>
+</select>
+  </div>
+</div>
+</div>
+
+
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Contact No.</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="Enter your phone number" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+</div>
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div>
+
+
+<form action="/emergency/">
+<center><button type="submit" class="btn btn-danger">emergency</button></center>
+</form>
+</body>
+</html>

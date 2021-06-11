@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>USER PROFILE</title>
+  </head>
+  <body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<center><h4> USER PROFILEDETAILS</h4></center> 
+{% for i in userprofile %}
+<center>
+<table border="2"  >
+
+<tr class="table-primary"><td> Firstname</td>
+<td><p><center>{{i.firstname}}</center></p></td></tr>
+
+<tr class="table-success">
+<td> Lastname</td>
+<td><p><center>{{i.lastname}}</center></p></td></tr>
+
+<tr class="table-danger">
+<td> DOB</td>
+<td><p><center>{{i.dob}}</center></p></td></tr>
+
+<tr class="table-warning">
+<td> Phone</td>
+<td><p><center>{{i.phone}}</center></p></td></tr>
+<tr class="table-info">
+<td>Health issue</td>
+<td><p><center>{{i.healthissue}}</center></p></td></tr>
+
+<tr class="table-light">
+<td> Interest</td>
+<td><p><center>{{i.interest}}</center></p></td></tr>
+
+<tr class="table-dark">
+<td> Hobby</td>
+<td><p><center>{{i.hobby}}</center></p></td></tr>
+<tr class="table-dark">
+<td> Email</td>
+<td><p><center>{{i.email}}</center></p></td></tr>
+<tr class="table-secondary">
+<td> Economic_pref</td>
+<td><p><center>{{i.economic_pref}}</center></p></td></tr>
+
+
+</table>
+{% endfor %}
+
+
+
+

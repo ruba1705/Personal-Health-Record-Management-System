@@ -1,0 +1,121 @@
+<html>
+<body>
+<form action="/upload/" method="post">
+{% csrf_token %}
+{% for profile in userprofile %}
+
+name<input type="text" name="name" value="{{profile.firstname}}" ><br>
+<div class="form-group">
+  <label class="col-md-4 control-label" >Last Name</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="lname" placeholder="Last Name" class="form-control"  type="text" value="{{profile.lastname}}">
+    </div>
+  </div>
+</div>
+
+
+
+
+<!---<div class="form-group">
+  <label class="col-md-4 control-label" >Email</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="email" placeholder="email" class="form-control"  type="email">
+    </div>
+  </div>
+</div>-->
+
+<div class="form-group">
+ <label class="col-md-4 control-label" >DOB</label> 
+     <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+ <input type="date" placeholder="enter your Date of Birth"  class="form-control" name="dob" value="{{profile.dob}}"><br>
+</div>
+  </div>
+</div>
+       
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Health issue</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="healthissue" class="form-control selectpicker" >
+      <option  value="{{profile.healthissue}}">Select the health issue</option>  
+       <option>Heart</option>
+       <option>Lungs</option>
+       <option>Eye</option>
+       <option>Kidney</option>
+</select>
+  </div>
+</div>
+</div>
+ 
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Enter the Interest</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="interest" class="form-control selectpicker">
+      <option  value="{{profile.interest}}">Choose the interest</option>  
+      <option>Politics</option>
+      <option>ComputerScience</option>
+      <option>History</option>
+</select>
+  </div>
+</div>
+</div>
+
+        
+
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Hobby</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="hobby" class="form-control selectpicker">
+      <option  value="{{profile.hobby}}">Select the hobby</option>  
+      <option>Sports</option>
+      <option>Music</option>
+      <option>Cooking</option>
+      <option>Movies</option>
+       <option>Drawing</option>
+</select>
+  </div>
+</div>
+</div>
+
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Economic Preference</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="economic_pref" class="form-control selectpicker">
+      <option  value="{{profile.economic_pref}}">Select the economic preference</option>  
+<option>High</option>
+      <option>Moderate</option>
+      <option>Low</option>
+</select>
+  </div>
+</div>
+</div>
+
+
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Contact No.</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="Enter your phone number" class="form-control" type="text"  value="{{profile.phone}}">
+    </div>
+  </div>
+</div>
+{%endfor %}
+<button type="submit">Submit</button>
+</form>
+</body>
+</html>

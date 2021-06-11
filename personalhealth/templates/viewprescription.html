@@ -1,0 +1,16 @@
+<center>
+<center>My Presciption</center>
+<table border="2">
+
+<tr><th>PrescriptionName</th><th>Description</th><th>DiseaseName</th><th>MedicineName</th><th>Time</th><th>Meal</th></tr>
+{% for i in prescription %}
+<tr><td><p>{{i.prescrip_name}}</p></td>
+<td><p>{{i.description}}</p></td>
+<td><p>{{i.diseasename}}</p></td>
+<td><p>{{i.medicinename}}</p></td> 
+<td><p>{{i.time}}</p></td> 
+<td><p>{{i.meal}}</p></td> 
+<td><a href="/presdelete/{{i.id}}" >Delete</a></td>
+<td><a href="/presupdate/{{i.id}}" >update</a></td>
+{% endfor %}
+</table>
